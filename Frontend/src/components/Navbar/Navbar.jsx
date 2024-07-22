@@ -16,7 +16,7 @@ const Navbar = () => {
       <img class="logo" src={logo} alt="Lindo Y Querido Logo" />
       <nav ref={navRef}>
           <a href="/">Home</a>
-          <a href="/products">Products</a>
+          <a href="/productPage">Products</a>
           <a href="/locations">Locations</a>
           <a href="/contact">Contact Us</a>
           <button className='nav-btn nav-close-btn' onClick={showNavbar}>
