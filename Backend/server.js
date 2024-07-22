@@ -6,7 +6,7 @@ const path = require('path');
 const app = express();
 const port = 3000; 
 
-app.use(express.static(path.join( 'Frontend', 'dist')));
+app.use(express.static(path.join(__dirname, 'Frontend', 'dist')));
 console.log(path.join( 'Frontend', 'dist'));
 app.use(cors());
 app.use(express.json());
@@ -73,7 +73,7 @@ app.get('/products', (req, res) => {
 
 
 app.get('*', (req, res) => {
-    res.sendFile(path.join('Frontend','dist', 'index.html'));
+    res.sendFile(path.join(__dirname, 'Frontend','dist', 'index.html'));
   });
   
 
