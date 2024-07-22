@@ -13,9 +13,9 @@ app.use(express.json());
 
 const connection = mysql.createConnection( {
     host: 'sql5.freesqldatabase.com',
-    user: 'sql5719956',
-    password: 'sas5lFrSl5',
-    database: 'sql5719956',
+    user: 'sql5721447',
+    password: 'yZ21t96JjY',
+    database: 'sql5721447',
     port: 3306
 })
 
@@ -30,7 +30,7 @@ app.get('/products', (req, res) => {
     const category = req.query.category;
     const sort = req.query.sort;
     let query = `
-        SELECT p.id, p.title, p.description, p.price, p.ImagePath, c.name AS category
+        SELECT p.id, p.title, p.description, p.price, p.imagePath, c.name AS category
         FROM Products p
         JOIN categories c ON p.category_id = c.id
     `;

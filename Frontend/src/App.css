@@ -6,6 +6,7 @@ html, body {
   background-color: whitesmoke;
 }
 
-.product-header {
+.product-header, .location-header {
+  text-align: center; 
   color: #8e4406;
 }

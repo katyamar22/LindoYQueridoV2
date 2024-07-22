@@ -7,7 +7,7 @@ const Location = () => {
   return (
     <div>
       <Navbar />
-      <h1>Our Locations</h1>
+      <h1 className='location-header'>Our Locations</h1>
       <Map />
       <Footer />
     </div>

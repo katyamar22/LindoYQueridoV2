@@ -9,7 +9,16 @@
     border: none;
     background-color: whitesmoke;
     color: #8E4406;
+    font-size: 1.2rem;
+    font-family: "Playfair Display";
 }
+
+.location-buttons button:hover {
+    background-color: #8E4406;
+    color: whitesmoke;
+    cursor: pointer;
+}
+
 .store-info {
     display: flex;
     flex-direction: column;

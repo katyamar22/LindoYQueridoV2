@@ -3,9 +3,9 @@ import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 import './Map.css'
 
 const locations = [
-    { id: 1, name: "Charlotte Location", address: `Calle Benito Juárez 123 Colonia Centro, Morelia, Michoacán, Mexico`, lat: 35.2271, lng: -80.8431, contact: "(704) 555-1234", hours: "9am - 5pm" },
-    { id: 2, name: "Texas Location", address: ``,lat: 29.7604, lng: -95.3698, contact: "(713) 555-5678", hours: "9am - 6pm" },
-    { id: 3, name: "Morelia Location", address: ``, lat: 19.7039, lng: -101.1950, contact: "+52 443 555 9012", hours: "10am - 6pm" }
+    { id: 1, name: "Charlotte Location", address: `123 Main Street Charlotte, NC 28202 United States`, lat: 35.2271, lng: -80.8431, contact: "(704) 555-1234", hours: "9am - 5pm" },
+    { id: 2, name: "Texas Location", address: `456 Elm Street Houston, TX 77002 United States`,lat: 29.7604, lng: -95.3698, contact: "(713) 555-5678", hours: "9am - 6pm" },
+    { id: 3, name: "Morelia Location", address: `Calle Benito Juárez 123 Colonia Centro, Morelia, Michoacán, Mexico`, lat: 19.7039, lng: -101.1950, contact: "+52 443 555 9012", hours: "10am - 6pm" }
 ];
 
 const containerStyle = {
