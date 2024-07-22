@@ -1,0 +1,31 @@
+.categories-header{
+    font-family: "Playfair Display";
+}
+
+.categories-header, .categories-text {
+    color: #8E4406;
+    text-align: center;
+}
+
+.categories-text {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.category-grid {
+    display: grid;
+    justify-content: center;
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+    .category-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Media query for smaller screens */
+@media (max-width: 767px) {
+    .category-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+    }
+}

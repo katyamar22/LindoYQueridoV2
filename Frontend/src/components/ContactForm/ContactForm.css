@@ -1,0 +1,39 @@
+.contact-form {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.text {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 70%;
+    margin:auto;
+    margin-top: 5%;
+    color: #8E4406;
+}
+
+.form {
+    border: 2px solid #8E4406;
+    border-radius: 10px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    width: 75%;
+    margin: 5% auto;
+}
+
+.form-group {
+    margin: 10px;
+}
+
+.form-group input:focus {
+    outline: 0;
+    border-color: #777;
+}
+
+.form input, .form textarea {
+    width: 80%;
+ 
+    margin: 8px auto;
+
+}

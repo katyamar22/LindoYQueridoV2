@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+.get-in-touch {
+    width: 100%;
+    background-color: #8E4406;
+    color:whitesmoke;
+    margin-top: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    padding: 5%;
+    font-family: "PLayfair Display";
+}
+
+.contact-methods {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 65px;
+    width: 90%;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+.contact-methods svg {
+    font-size: 2.5rem;
+    margin: 0 auto;
+    background-color: #c49b79;
+    padding: 15px;
+    border-radius: 50%;
+}
+
+.locations-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  
+}
+
+@media (max-width: 1023px) {
+    .contact-methods{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        row-gap: 50px;
+    }
+
+    .contact-methods svg {
+        font-size: 1.5rem;
+    }
+
+    .contact-methods {
+        font-size: 0.8rem;
+    }
+
+}

@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+.logo {
+  width: 150px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  color: #8E4406;
+}
+
+nav a {
+  margin: 0 2rem;
+  color:#8E4406;
+  text-decoration: none;
+  font: "Playfair Display";
+}
+
+nav a:hover {
+  color: #b78257;
+}
+
+header .nav-btn {
+  padding: 5px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+  color:#8E4406;
+  visibility: hidden;
+  opacity: 0;
+  font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 1024px) {
+  header .nav-btn {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  header nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    transform: translateY(-100vh);
+    background-color: #8E4406;
+  }
+
+  nav a {
+    color: whitesmoke;
+  }
+
+  header .nav-close-btn {
+    color: whitesmoke
+  }
+
+  header .responsive-nav{
+    transform: none;
+  }
+
+  header .nav-close-btn {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+  }
+
+  nav a {
+    font-size: 1.5rem;
+  }
+}

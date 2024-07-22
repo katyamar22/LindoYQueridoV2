@@ -1,0 +1,37 @@
+.location-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 3% auto;
+}
+
+.location-buttons button {
+    border: none;
+    background-color: whitesmoke;
+    color: #8E4406;
+}
+.store-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: #8E4406;
+    font-family: "Playfair Display";
+    margin: 5% auto;
+}
+
+.map-container {
+    margin: 5% auto;
+}
+
+@media (min-width: 768px) {
+    .location-buttons {
+        flex-direction: row;
+    }
+
+    .map-container {
+        display: grid;
+        grid-template-columns: 35% 1fr;
+        grid-template-rows: 1fr;
+    }
+}
