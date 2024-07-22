@@ -2,27 +2,30 @@ const express = require('express');
 const mysql = require('mysql2');
 const cors = require('cors');
 const path = require('path');
-require('dotenv').config();
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = 3000; 
 
+app.use(express.static(path.join( 'Frontend', 'dist')));
+console.log(path.join( 'Frontend', 'dist'));
 app.use(cors());
 app.use(express.json());
-app.use(express.static(path.join(__dirname, '..', 'Frontend', 'dist')));
 
-const connection = mysql.createConnection({
-    host: process.env.DB_HOST,
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_NAME,
-    port: process.env.DB_PORT
-});
+
+const connection = mysql.createConnection( {
+    host: 'sql5.freesqldatabase.com',
+    user: 'sql5721447',
+    password: 'yZ21t96JjY',
+    database: 'sql5721447',
+    port: 3306
+})
 
 connection.connect((err) => {
     if (err) throw err;
-    console.log('MySQL Database is connected!');
+    console.log('My SQL Database is connected!')
 });
+
+app.use(express.json());
 
 app.get('/products', (req, res) => {
     const category = req.query.category;
@@ -66,11 +69,14 @@ app.get('/products', (req, res) => {
         res.json(results);
     });
 });
+  
+
 
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '..', 'Frontend', 'dist', 'index.html'));
-});
+    res.sendFile(path.join('Frontend','dist', 'index.html'));
+  });
+  
 
 app.listen(port, () => {
-    console.log(`Server is running on port ${port}!`);
-});
+    console.log(`Server is running on port ${port}!`)
+  });
