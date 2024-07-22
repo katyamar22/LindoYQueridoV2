@@ -71,9 +71,9 @@ app.get('/products', (req, res) => {
   
 
 
-// app.get('*', (req, res) => {
-//     res.sendFile(path.join(__dirname, '..', 'Frontend', 'dist', 'index.html'));
-//   });
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'Frontend', 'dist', 'index.html'));
+  });
   
 
 app.listen(port, () => {
