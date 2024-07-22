@@ -5,10 +5,8 @@ const path = require('path');
 require('dotenv').config();
 
 const app = express();
-const port = process.env.PORT || 3000; 
+const port = 3000; 
 
-const frontendPath = process.env.FRONTEND_PATH || path.join(__dirname, '..', 'Frontend', 'dist');
-app.use(express.static(frontendPath));
 app.use(express.static(path.join( 'Frontend', 'dist')));
 console.log(path.join( 'Frontend', 'dist'));
 app.use(cors());
@@ -76,8 +74,9 @@ app.get('/products', (req, res) => {
 
 
 app.get('*', (req, res) => {
-    res.sendFile(path.join(frontendPath, 'index.html'));
-});
+    res.sendFile(path.join('~','Frontend','dist', 'index.html'));
+  });
+  
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}!`)
