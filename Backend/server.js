@@ -73,7 +73,7 @@ app.get('/products', (req, res) => {
 
 
 app.get('*', (req, res) => {
-    res.sendFile(path.join('Frontend','dist', 'index.html'));
+    res.sendFile(path.join('~','Frontend','dist', 'index.html'));
   });
   
 
