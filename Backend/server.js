@@ -10,6 +10,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors());
 app.use(express.json());
 
+
 const connection = mysql.createConnection( {
     host: 'sql5.freesqldatabase.com',
     user: 'sql5719956',
@@ -68,6 +69,10 @@ app.get('/products', (req, res) => {
     });
 });
   
-  app.listen(port, () => {
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+  });
+
+app.listen(port, () => {
     console.log(`Server is running on port ${port}!`)
   });
