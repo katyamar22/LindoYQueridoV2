@@ -12,7 +12,7 @@ const Footer = () => {
         <ul>
             <h4 className='list-header'>Pages</h4>
             <li><a href='/'>Home</a></li>
-            <li><a href='/products'>Products</a></li>
+            <li><a href='/productpage'>Products</a></li>
             <li><a href='/locations'>Locations</a></li>
             <li><a href='/contact'>Contact Us</a></li>
         </ul>

@@ -1,0 +1,12 @@
+.carousel-indicators button {
+    background-color: white;
+    border-radius: 50%;
+    border: none;
+    width: 10px;
+    height: 10px;
+    margin: 5px;
+}
+
+  .carousel-control-prev, .carousel-control-next {
+    visibility: hidden;
+  }

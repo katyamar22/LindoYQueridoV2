@@ -1,4 +1,7 @@
 import React from 'react';
+import { FaMapLocationDot } from 'react-icons/fa6';
+import { FaPhone } from 'react-icons/fa6';
+import { FaEnvelope } from 'react-icons/fa6';
 import './GetInTouch.css';
 
 const GetInTouch = () => {
@@ -7,8 +10,8 @@ const GetInTouch = () => {
       <h1>GET IN TOUCH</h1>
       <div className="contact-methods">
         <div className="locations-div">
-    
-            <p> View our Locations here.</p>
+            <FaMapLocationDot />
+            <p> View our Locations <a className='locations-link' href='/locations'>here</a>.</p>
             <p>We'd love to hear from you! For any inquiries, feedback, or correspondence, please send your mail to our office at:</p>
             <p>
             Luz Y Tierra<br/>
@@ -19,7 +22,7 @@ const GetInTouch = () => {
         </div>
 
         <div className="phone-div">
-     
+            <FaPhone />
             <p>Have any questions or need assistance? Give us a call! Our customer service team is here to help during our business hours:</p>
             <p>
             <strong>Phone Number:</strong> +52 55 1234 5678<br/>
@@ -32,7 +35,7 @@ const GetInTouch = () => {
         </div>
 
         <div className="email-div">
-
+            <FaEnvelope />
             <p>Prefer to reach out via email? No problem! Send us your inquiries, feedback, or any other messages to our email address, and our team will get back to you as soon as possible:</p>
             <p>
             <strong>Email Address:</strong> <a href="mailto:info@luzytierra.com">info@luzytierra.com</a>

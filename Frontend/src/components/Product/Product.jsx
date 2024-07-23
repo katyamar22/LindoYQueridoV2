@@ -5,6 +5,7 @@ import { FaHeart } from 'react-icons/fa6';
 import './Product.css'
 
 
+
 const Product = () => {
     const [products, setProducts] = useState([]); 
     const [category, setCategory] = useState('');
@@ -20,7 +21,7 @@ const Product = () => {
 
     useEffect(() => {
         const fetchProducts = () => {
-            let url = 'http://localhost:3000/products';
+            let url = 'http://localhost:3000/api/products';
             const params = new URLSearchParams();
             if (category) params.append('category', category);
             if (sort) params.append('sort', sort);
@@ -29,7 +30,6 @@ const Product = () => {
             axios.get(url)
                 .then(response => {
                     setProducts(response.data);
-                    console.log(response.data);
                 })
                 .catch(error => {
                     console.error('There was an error fetching the products!', error);
@@ -59,9 +59,10 @@ const Product = () => {
             </div>
 
             <div className="product-grid">
+               
                 {products.map(product => (
                     <div key={product.id} className="product-card">
-                        <img className="product-img" src={product.ImagePath} alt={product.title} />
+                        <img className="product-img" src={product.imagePath} alt={product.title} />
                         <h6>{product.title}</h6>
                         <p>{product.price}</p>
                         <div className="product-btns">

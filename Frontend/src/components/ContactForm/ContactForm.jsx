@@ -1,4 +1,4 @@
-// src/components/ContactForm.jsx
+
 import React, { useState } from 'react';
 import './ContactForm.css';
 
@@ -15,7 +15,7 @@ const ContactForm = () => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
-    setErrors({ ...errors, [name]: '' }); // Clear error message on change
+    setErrors({ ...errors, [name]: '' }); 
   };
 
   const validateForm = () => {
@@ -31,9 +31,9 @@ const ContactForm = () => {
     e.preventDefault();
     const formErrors = validateForm();
     if (Object.keys(formErrors).length === 0) {
-      // Handle form submission logic here, such as sending the data to a server or email
+
       console.log('Form submitted:', formData);
-      // Clear the form after submission
+      // Reset form
       setFormData({
         name: '',
         email: '',
@@ -76,7 +76,7 @@ const ContactForm = () => {
           />
           {errors.email && <span className="error">{errors.email}</span>}
         </div>
-        <div className="phone">
+        <div className="form-group">
             <label htmlFor="phone">Phone Number:</label><br />
             <input type="text" id='phone' name='phone' value={FormData.phone} onChange={handleChange} />
         </div>

@@ -1,6 +1,7 @@
 .contact-form {
+    width: 75%;
     max-width: 600px;
-    margin: 0 auto;
+    margin: 5% auto;
     padding: 20px;
     background: #f9f9f9;
     border-radius: 8px;
