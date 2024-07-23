@@ -33,7 +33,7 @@ const ContactForm = () => {
     if (Object.keys(formErrors).length === 0) {
 
       console.log('Form submitted:', formData);
-      // Reset form
+     
       setFormData({
         name: '',
         email: '',
@@ -60,7 +60,6 @@ const ContactForm = () => {
             name="name"
             value={formData.name}
             onChange={handleChange}
-        
           />
           {errors.name && <span className="error">{errors.name}</span>}
         </div>
@@ -72,13 +71,19 @@ const ContactForm = () => {
             name="email"
             value={formData.email}
             onChange={handleChange}
- 
           />
           {errors.email && <span className="error">{errors.email}</span>}
         </div>
         <div className="form-group">
             <label htmlFor="phone">Phone Number:</label><br />
-            <input type="text" id='phone' name='phone' value={FormData.phone} onChange={handleChange} />
+            <input 
+            type="text"
+            id = "phone"  
+            name='phone' 
+            value={FormData.phone} 
+            onChange={handleChange} 
+            />
+          {errors.phone && <span className="error">{errors.message}</span>}
         </div>
         <div className="form-group">
           <label htmlFor="message">Message:</label><br />

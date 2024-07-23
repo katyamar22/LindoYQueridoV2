@@ -44,7 +44,7 @@ const Product = () => {
                 <div className="category-filters">
                     <button onClick={() => setCategory('apparel')}>Apparel</button>
                     <button onClick={() => setCategory('kitchenware')}>Kitchenware</button>
-                    <button onClick={() => setCategory('homedecor')}>Home Decor</button>
+                    <button onClick={() => setCategory('HomeDecor')}>Home Decor</button>
                     <button onClick={() => setCategory('')}>All Products</button>
                 </div>
                 <div className="sort-filters">
