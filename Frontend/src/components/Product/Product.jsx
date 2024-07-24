@@ -21,7 +21,7 @@ const Product = () => {
 
     useEffect(() => {
         const fetchProducts = () => {
-            let url = 'http://localhost:3000/api/products';
+            let url = '/api/products';
             const params = new URLSearchParams();
             if (category) params.append('category', category);
             if (sort) params.append('sort', sort);
